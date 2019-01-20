@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,36 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SHNetworlLayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-5A-odU">
+                                <rect key="frame" x="166" y="318" width="43" height="31"/>
+                                <state key="normal" title="Login "/>
+                                <connections>
+                                    <action selector="doLoingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SrV-ZD-iUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQm-KB-rpb">
+                                <rect key="frame" x="146" y="364" width="83" height="29"/>
+                                <state key="normal" title="Load Article"/>
+                                <connections>
+                                    <action selector="loadArticlesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEJ-Px-9Wo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FYd-5A-odU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bq8-we-kWz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JQm-KB-rpb" secondAttribute="bottom" constant="274" id="G3j-N7-F4X"/>
+                            <constraint firstItem="FYd-5A-odU" firstAttribute="centerX" secondItem="JQm-KB-rpb" secondAttribute="centerX" id="N22-uY-BiI"/>
+                            <constraint firstItem="FYd-5A-odU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="PA3-3S-dMl"/>
+                            <constraint firstItem="FYd-5A-odU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="aAy-bV-E8e"/>
+                            <constraint firstItem="FYd-5A-odU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e3M-ZA-q6b"/>
+                            <constraint firstItem="JQm-KB-rpb" firstAttribute="top" secondItem="FYd-5A-odU" secondAttribute="bottom" constant="15" id="fRM-Pf-b9A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
